@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/home.css')}}">
+{% endblock %}
+
+{% block content %}
+  <section class="home-section">
+    <div class="gallery">
+      <article class="card">
+
+        <figure>
+          <img src="{{url_for('static', filename='image/flower1.jpg')}}" alt="flower1">
+          <figcaption>
+            <h3>flower1</h3>
+          </figcaption>
+        </figure>
+      </article>
+      <article class="card">
+        <figure>
+          <img src="{{url_for('static', filename='image/flower2.jpg')}}" alt="flower2">
+          <figcaption>
+            <h3>flower2</h3>
+          </figcaption>
+        </figure>
+      </article>
+      <article class="card">
+        <figure>
+          <img src="{{url_for('static', filename='image/flower3.jpg')}}" alt="flower3">
+          <figcaption>
+            <h3>flower3</h3>
+          </figcaption>
+        </figure>
+      </article>
+      <article class="card">
+        <figure>
+          <img src="{{url_for('static', filename='image/flower4.jpg')}}" alt="folwer4">
+          <figcaption>
+            <h3>folwer4</h3>
+          </figcaption>
+        </figure>
+      </article>
+    </div>
+    <marquee>Welcome to the Flower Identification website!</marquee>
+  </section>
+{% endblock %}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhận diện hoa</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/base.css')}}">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    {% block head%}
+    {% endblock %}
+</head>
+<body>
+   <div>
+       <div class="get-image">
+           <img id="ESP32-1" src="" />
+            <div class="button-container">
+                <button class="button" id="cam_1_enabler" onclick="buttonFunc('cam_1_enabler')">Chụp</button>
+                <button class="button" id="cam_1_save" onclick="saveFunc('cam_1_enabler')"
+                    style="background-color: #008cba;">Nhận diện ngay</button>
+            </div>
+       </div>
+  <div class="sidebar">
+    <div class="logo-details">
+      <div class="logo_name">Menu</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="/">
+          <i class="bx bx-home"></i>
+          <span class="links_name">Home</span>
+        </a>
+        <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <form method="get" class="form_search">
+          <i class="bx bx-search"></i>
+          <input type="text" placeholder="Search..." name="flower" autocomplete="off"/>
+          <span class="tooltip">Search</span>
+        </form>
+      </li>
+      <li class="camera">
+        <a>
+          <i class="bx bx-camera"></i>
+          <span class="links_name">Take a photo</span>
+        </a>
+        <span class="tooltip">Take a photo</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-spa"></i>
+          <span class="links_name">Flower list</span>
+        </a>
+        <span class="tooltip">Flower list</span>
+      </li>
+    </ul>
+  </div>
+  {% block content%} {% endblock %}
+</div>
+  <script src="{{url_for('static', filename='js/base.js')}}"></script>
+</body>
+</html>

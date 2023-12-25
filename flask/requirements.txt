@@ -1,0 +1,11 @@
+flask
+flask-smorest
+python-dotenv
+flask-sqlalchemy
+mysql-connector-python
+flask_socketio
+flask_cors
+numpy
+tensorflow
+pillow
+matplotlib

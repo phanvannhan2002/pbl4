@@ -1,0 +1,89 @@
+body{
+  padding: 0;
+  margin: 20px;
+}
+html{
+  font-family: 'Roboto', sans-serif;
+  color: #31406f;
+}
+
+h1{
+  margin-top: 10px;
+  color: red;
+}
+h2{
+  margin-bottom: 5px;
+}
+.thongtin{
+  margin-top: 40px;
+}
+img{
+  width: 100%;
+  height: 25%;
+  border-radius: 10px;
+}
+.contaner{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+.information, .source, .care {
+  background-color: #fff;
+  padding: 15px;
+  border: 0.7px solid #ccc;
+  border-radius: 20px;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.icon i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #3498db;
+}
+.icon p {
+  margin: 0;
+  margin: 10px;
+}
+
+.icon a {
+  text-decoration: none;
+}
+hr {
+  border-radius: 10px;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+.list{
+  display: grid;
+  margin-left: 55px;
+}
+.list span{
+  margin-top: 5px;
+}
+
+.home-section{
+  position: relative;
+  min-height: 100vh;
+  top: -38px;
+  left: 76px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+  padding: 42px;
+  display: grid;
+  gap: 80px;
+}
+
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
+
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}

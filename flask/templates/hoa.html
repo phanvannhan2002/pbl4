@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/hoa.css')}}">
+    <script src="https://kit.fontawesome.com/c9f5871d83.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block content %}
+<div class="home-section">
+        <div class="contaner">
+          <!-- bên trái -->
+          <div class="contaner1">
+            <img src={{data.img[1].img_url}} alt="rosa1" />
+            <h1>{{data.tenthongthuong}}</h1>
+            <h2 class="thongtin">Nguồn gốc</h2>
+            <div class="source">
+              <div class="icon">
+                <a href="#">
+                  <i class="fa-solid fa-location-dot"></i>
+                </a>
+                <p>Địa điểm phát hiện:</p>
+                <p>{{data.nguongoc.diadiemphathien}}</p>
+              </div>
+              <div class="icon">
+                <a href="#">
+                  <i class="fa-solid fa-list-check"></i>
+                </a>
+                <p>Phân loại:</p>
+                <p>
+                  {{data.nguongoc.phanloai}}
+                </p>
+              </div>
+              <div class="icon">
+                <a href="#">
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                </a>
+                <p>Lịch sử phát triển:</p>
+                <p>
+                  {{data.nguongoc.lichsupt}}
+                </p>
+              </div>
+              <hr />
+              <div class="icon">
+                <a href="#">
+                  <i class="fa-solid fa-location-dot"></i>
+                </a>
+                <p>Địa điểm phân bố hiện nay:</p>
+                <p>{{data.nguongoc.phanbohiennay}}</p>
+              </div>
+              <div class="icon">
+                <a href="#">
+                  <i class="fa-solid fa-users"></i>
+                </a>
+                <p>Đăng bởi: nhóm xxx</p>
+              </div>
+            </div>
+            <h2 class="thongtin">Cách chăm sóc</h2>
+            <div class="care">
+              <div class="icon">
+                <a href="#">
+                  <i class="fa-solid fa-share-from-square"></i>
+                </a>
+                <h3>
+                  Chăm sóc hoa là một quá trình quan trọng để đảm bảo cây phát
+                  triển mạnh khỏe và cho hoa đẹp. Dưới đây là một số cách chăm
+                  sóc hoa hồng hiệu quả:
+                </h3>
+              </div>
+              <ul class="list">
+                <li>
+                  Ánh Sáng:
+                  <span>
+                    {{data.cachchamsoc.anhsang}}
+                  </span>
+                </li>
+                <li>
+                  Thổ Nhưỡng:
+                  <span>
+                    {{data.cachchamsoc.dat}}
+                  </span>
+                </li>
+                <li>
+                  Tưới Nước:
+                  <span>
+                    {{data.cachchamsoc.nuoc}}
+                  </span>
+                </li>
+                <li>
+                  Bón Phân:
+                  <span>
+                    {{data.cachchamsoc.phan}}
+                  </span>
+                </li>
+                <li>
+                  Cắt Tỉa:
+                  <span>
+                    {{data.cachchamsoc.cattia}}
+                  </span>
+                </li>
+                <li>
+                  Kiểm Tra Sâu Bệnh:
+                  <span>
+                    {{data.cachchamsoc.saubenh}}
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- bên phải -->
+          <div class="contaner2">
+            <h2>Thông tin chi tiết</h2>
+            <div class="information">
+              <div class="icon">
+                <a href="#">
+                  <i class="fa-solid fa-address-book"></i>
+                </a>
+                <p>Tên gọi thông thường:</p>
+                <p>{{data.tenthongthuong}}</p>
+              </div>
+              <div class="icon">
+                <a href="#">
+                  <i class="fa-regular fa-address-book"></i>
+                </a>
+                <p>Tên khoa học:</p>
+                <p>{{data.tenkhoahoc}}</p>
+              </div>
+              <div class="icon">
+                <a href="#">
+                  <i class="fa-solid fa-palette"></i>
+                </a>
+                <p>Màu sắc:</p>
+                <p>
+                  {{data.mausac}}
+                </p>
+              </div>
+              <div class="icon">
+                <a href="#">
+                  <i class="fa-regular fa-note-sticky"></i>
+                </a>
+                <p>Mô tả:</p>
+                <p>
+                  {{data.mota}}
+                </p>
+              </div>
+              <hr />
+              <div class="icon">
+                <a href="#">
+                  <i class="fa-solid fa-map-location"></i>
+                </a>
+                <p>Phân bố địa lý:</p>
+                <p>
+                  {{data.phanbo}}
+                </p>
+              </div>
+              <div class="icon">
+                <a href="#">
+                  <i class="fa-solid fa-heart"></i>
+                </a>
+                <p>Sử dụng và giá trị:</p>
+                <p>
+                  {{data.sudung}}
+                </p>
+              </div>
+            </div>
+
+            <div class="img"></div>
+          </div>
+        </div>
+      </div>
+{% endblock %}

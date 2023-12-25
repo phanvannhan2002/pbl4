@@ -1,0 +1,97 @@
+.home-section{
+  position: relative;
+  background: #486a7a;
+  min-height: 100vh;
+  top: -36;
+  left: 76px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+  padding: 42px;
+  display: grid;
+  gap: 80px;
+}
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+.home-section .gallery{
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
+
+.home-section .gallery{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  gap: 16px;
+  scale: 1.2;
+}
+.card{
+  position: relative;
+  left: 0px;
+  width: 140px;
+  height: 160px;
+  background-color: var(--background);
+  border-radius: 8px;
+  transition: 1000ms all;
+  transform-origin: center left;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+  outline: 1px solid var(--background);
+  overflow: hidden;
+}
+
+.card img{
+  width: 140px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card:hover{
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+.card:hover figcaption{
+  font-size: 0.6rem;
+  position: absolute;
+  height: 80px;
+  width: 160px;
+  display: flex;
+  align-items: end;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%,
+  );
+  color: #fff;
+  left: 0px;
+  bottom: 0px;
+  padding-left: 12px;
+  padding-bottom: 10px;
+}
+
+.card:hover ~ .card{
+  font-weight: bold;
+  cursor: pointer;
+  transform: translate(22px);
+}
+
+marquee{
+  font-size: 1.2em;
+  color: aqua;
+}
+
+.home-section {
+  overflow: hidden;
+}
